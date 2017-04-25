@@ -44,7 +44,6 @@ class App
                 $filter->printErrors();
                 return 1;
             }
-            
         }
         return 0;
     }
