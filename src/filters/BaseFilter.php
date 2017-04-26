@@ -1,12 +1,14 @@
 <?php
 
+namespace padavvan\cshook\filters;
+
+use padavvan\cshook\interfaces\FilterInterface;
+
 /**
- * Created by PhpStorm.
- * User: Razer
- * Date: 25.04.2017
- * Time: 21:58
+ * Class BaseFilter
+ * @package padavvan\cshook\filters
  */
-class BaseFilter
+abstract class BaseFilter implements FilterInterface
 {
 
 }

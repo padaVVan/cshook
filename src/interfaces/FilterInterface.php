@@ -1,12 +1,22 @@
 <?php
 
+namespace padavvan\cshook\interfaces;
+
 /**
- * Created by PhpStorm.
- * User: Razer
- * Date: 25.04.2017
- * Time: 21:59
+ * Interface FilterInterface
+ * @package padavvan\cshook\interfaces
  */
 interface FilterInterface
 {
+    /**
+     * FilterInterface constructor.
+     * @param $config
+     */
+    public function __construct($config);
 
+    public function run();
+
+    public function isOk();
+
+    public function printErrors();
 }

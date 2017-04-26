@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+
+$configFile = getcwd() . '/.cshook';
+$app = new padavvan\cshook\App([$configFile]);
+$code = $app->run('pre-commit');
+exit($code);

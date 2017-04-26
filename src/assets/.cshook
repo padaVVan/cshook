@@ -1,3 +1,10 @@
 {
-	
+    "phpcs": {
+        "params": ["src"],
+        "flags": {
+            "--standard": "PSR2",
+            "--ignore": ["src/assets/.*"]
+        }
+    },
+    "pre-commit": ["phpcs"]
 }
