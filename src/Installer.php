@@ -17,7 +17,7 @@ class Installer
             return;
         }
 
-        copy(__DIR__ . '/assets/pre-commit', $gitPath . '/hooks/git-hook.php');
+        copy(__DIR__ . '/assets/pre-commit', $gitPath . '/hooks/pre-commit');
     }
 
     /**
