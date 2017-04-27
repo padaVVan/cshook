@@ -30,8 +30,7 @@ class Binary
     /**
      * @return array
      */
-    public function exec()
-    {
+    public function exec() {
         $flags = $this->prepareFlags($this->flags);
         $params = $this->prepareParams($this->params);
 
