@@ -7,8 +7,7 @@ use padavvan\cshook\common\Binary;
 /**
  * Class PhpcsFilter
  */
-class PhpcsFilter extends BaseFilter
-{
+class PhpcsFilter extends BaseFilter{
     private $binary;
 
     private $result = [];
