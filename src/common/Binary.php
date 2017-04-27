@@ -8,9 +8,7 @@ namespace padavvan\cshook\common;
  */
 class Binary {
     private $bin;
-
     private $params;
-
     private $flags;
 
     /**
@@ -33,7 +31,7 @@ class Binary {
         $flags = $this->prepareFlags($this->flags);
         $params = $this->prepareParams($this->params);
 
-        $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
+        echo $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
         $result = [];
         exec($cmd, $result);
         return $result;
