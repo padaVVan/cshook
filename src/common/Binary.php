@@ -6,7 +6,8 @@ namespace padavvan\cshook\common;
  * Class Binary
  * @package padavvan\cshook
  */
-class Binary {
+class Binary
+{
     private $bin;
     private $params;
     private $flags;
@@ -17,7 +18,8 @@ class Binary {
      * @param null $params
      * @param null $flags
      */
-    public function __construct($bin, $params = null, $flags = null) {
+    public function __construct($bin, $params = null, $flags = null)
+    {
         $this->bin = $bin;
         $this->params = $params;
         $this->flags = $flags;
@@ -27,11 +29,11 @@ class Binary {
      * @return array
      */
     public function exec()
-	{
+    {
         $flags = $this->prepareFlags($this->flags);
         $params = $this->prepareParams($this->params);
 
-        echo $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
+        $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
         $result = [];
         exec($cmd, $result);
         return $result;
@@ -41,7 +43,8 @@ class Binary {
      * @param $flags
      * @return string
      */
-    private function prepareFlags($flags) {
+    private function prepareFlags($flags)
+    {
         if (is_string($flags)) {
             return $flags;
         } elseif (is_array($flags)) {

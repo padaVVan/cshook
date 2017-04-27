@@ -7,7 +7,8 @@ use padavvan\cshook\common\Binary;
 /**
  * Class PhpcsFilter
  */
-class PhpcsFilter extends BaseFilter{
+class PhpcsFilter extends BaseFilter
+{
     private $binary;
 
     private $result = [];
@@ -20,13 +21,14 @@ class PhpcsFilter extends BaseFilter{
      * PhpcsFilter constructor.
      * @param $config
      */
-    public function __construct($config){
+    public function __construct($config)
+    {
         $flags = isset($config['flags']) ? $config['flags'] : [];
         $params = isset($config['params']) ? $config['params'] : [];
         $bin = isset($config['bin']) ? $config['bin'] : getcwd() . '/vendor/bin/phpcs';
 
         $this->binary = new Binary($bin, $params, $flags);
-        $this->binary->addFlag('--report', 'CSV');
+        $this->binary->addFlag('--report', 'csv');
     }
 
     /**
@@ -46,7 +48,8 @@ class PhpcsFilter extends BaseFilter{
     /**
      * @return array
      */
-    private function getChangeFiles() {
+    private function getChangeFiles()
+    {
         $binary = new Binary('git', 'diff', ['--name-only', '--cached']);
 
         return $binary->exec();
