@@ -20,8 +20,7 @@ class PhpcsFilter extends BaseFilter{
      * PhpcsFilter constructor.
      * @param $config
      */
-    public function __construct($config)
-    {
+    public function __construct($config){
         $flags = isset($config['flags']) ? $config['flags'] : [];
         $params = isset($config['params']) ? $config['params'] : [];
         $bin = isset($config['bin']) ? $config['bin'] : getcwd() . '/vendor/bin/phpcs';
@@ -38,10 +37,9 @@ class PhpcsFilter extends BaseFilter{
         $changeFiles = $this->getChangeFiles();
         $changeFiles = $this->filterPhpFiles($changeFiles);
 
-        if ($changeFiles) {
+        if ($changeFiles)
             $this->binary->setParams($changeFiles);
             $this->result = $this->binary->exec();
-        }
     }
 
     /**
