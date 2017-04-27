@@ -37,16 +37,16 @@ class PhpcsFilter extends BaseFilter{
         $changeFiles = $this->getChangeFiles();
         $changeFiles = $this->filterPhpFiles($changeFiles);
 
-        if ($changeFiles)
+        if ($changeFiles) {
             $this->binary->setParams($changeFiles);
             $this->result = $this->binary->exec();
+        }
     }
 
     /**
      * @return array
      */
-    private function getChangeFiles()
-    {
+    private function getChangeFiles() {
         $binary = new Binary('git', 'diff', ['--name-only', '--cached']);
 
         return $binary->exec();

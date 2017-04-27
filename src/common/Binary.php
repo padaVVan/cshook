@@ -36,6 +36,7 @@ class Binary
         $params = $this->prepareParams($this->params);
 
         $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
+        echo $cmd;
         $result = [];
         exec($cmd, $result);
         return $result;
