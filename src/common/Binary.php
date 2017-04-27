@@ -20,8 +20,7 @@ class Binary
      * @param null $params
      * @param null $flags
      */
-    public function __construct($bin, $params = null, $flags = null)
-    {
+    public function __construct($bin, $params = null, $flags = null) {
         $this->bin = $bin;
         $this->params = $params;
         $this->flags = $flags;
@@ -35,7 +34,6 @@ class Binary
         $params = $this->prepareParams($this->params);
 
         $cmd = sprintf('%s %s %s', $this->bin, $params, $flags);
-        echo $cmd;
         $result = [];
         exec($cmd, $result);
         return $result;
