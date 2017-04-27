@@ -6,8 +6,7 @@ namespace padavvan\cshook\common;
  * Class Binary
  * @package padavvan\cshook
  */
-class Binary
-{
+class Binary {
     private $bin;
 
     private $params;
@@ -29,7 +28,8 @@ class Binary
     /**
      * @return array
      */
-    public function exec() {
+    public function exec()
+	{
         $flags = $this->prepareFlags($this->flags);
         $params = $this->prepareParams($this->params);
 
