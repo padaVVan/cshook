@@ -45,8 +45,7 @@ class Binary
      * @param $flags
      * @return string
      */
-    private function prepareFlags($flags)
-    {
+    private function prepareFlags($flags) {
         if (is_string($flags)) {
             return $flags;
         } elseif (is_array($flags)) {
